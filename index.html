@@ -7,7 +7,7 @@
 
     <!-- arquivo phaser a partir de um endereço web -->
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
-    <title>Exercício do Pássaro</title>
+    <title>Exercício Bird</title>
     <style>
         body {
             display: flex;
@@ -43,7 +43,7 @@
         var passarinho;
         var passarinho2;
         var passarinho3;
-        var i;
+        var sparkle;
 
 
 
@@ -83,6 +83,9 @@
         // Imagem nuvem para ficar sobreposta
         this.add.image(400, 300, 'cloud').setScale(1);
 
+        // Imagem sparkle
+        sparkle = this.add.image(200, 300, 'sparkle').setScale(1);
+
         // spritesheet passarinho2
         passarinho2 = this.add.sprite(50, 100, 'bird2').setScale(1);
         this.anims.create({
@@ -103,21 +106,11 @@
         });
         passarinho3.anims.play('fly3', true);
 
-        sparkle = this.add.image(100, 300, 'sparkle').setScale(1); sparkle.setAlpha(0);
 
 
         }
 
         function update() {
-
-            while (i < 10) {
-            //fazer sparkle ficar 100% opacidade
-            sparkle.setAlpha(1);
-                i++;
-            }
-
-            // inventar movimento
-           
 
             // movimento passarinho
             if (passarinho.x === 100) {
@@ -240,6 +233,25 @@
             if (passarinho3.y > 100 && passarinho3.ida === false) {
                 console.log("Passarinho3 chega no limite inferior e vai subir");
                 passarinho3.y -= 3;
+            }
+
+            // Movimento sparkle
+            if (sparkle.x === 200) {
+                sparkle.ida = true;
+            }
+
+            while (sparkle.x < 300 && sparkle.ida === true) {
+                console.log("Sparkle anda no eixo x, para a direita até x = 700");
+                sparkle.x += 1;
+                break;
+            }
+            if (sparkle.x === 300) {
+                sparkle.ida = false;
+            }
+            while (sparkle.x > 200 && sparkle.ida === false) {
+                console.log("Sparkle anda no eixo x e inverte posição ao chegar em 200");
+                sparkle.x -= 1;
+                break;
             }
         }
 
