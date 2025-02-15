@@ -70,41 +70,41 @@
             this.add.image(400, 300, 'star').setScale(1);
 
 
-        // Spritesheet passarinho 1
-        passarinho = this.add.sprite(100, 300, 'bird').setScale(1.7);
-        this.anims.create({
-            key: 'fly',
-            frames: this.anims.generateFrameNumbers('bird', { start: 0, end: 7 }),
-            frameRate: 15,
-            repeat: -1
-        });
-        passarinho.anims.play('fly', true);
+            // Spritesheet passarinho 1
+            passarinho = this.add.sprite(100, 300, 'bird').setScale(1.7);
+            this.anims.create({
+                key: 'fly',
+                frames: this.anims.generateFrameNumbers('bird', { start: 0, end: 7 }),
+                frameRate: 15,
+                repeat: -1
+            });
+            passarinho.anims.play('fly', true);
 
-        // Imagem nuvem para ficar sobreposta
-        this.add.image(400, 300, 'cloud').setScale(1);
+            // Imagem nuvem para ficar sobreposta
+            this.add.image(400, 300, 'cloud').setScale(1);
 
-        // Imagem sparkle
-        sparkle = this.add.image(200, 300, 'sparkle').setScale(1);
+            // Imagem sparkle
+            sparkle = this.add.image(200, 300, 'sparkle').setScale(1);
 
-        // spritesheet passarinho2
-        passarinho2 = this.add.sprite(50, 100, 'bird2').setScale(1);
-        this.anims.create({
-            key: 'fly2',
-            frames: this.anims.generateFrameNumbers('bird2', { start: 0, end: 7 }),
-            frameRate: 10,
-            repeat: -1
-        });
-        passarinho2.anims.play('fly2', true);
+            // spritesheet passarinho2
+            passarinho2 = this.add.sprite(50, 100, 'bird2').setScale(1);
+            this.anims.create({
+                key: 'fly2',
+                frames: this.anims.generateFrameNumbers('bird2', { start: 0, end: 7 }),
+                frameRate: 10,
+                repeat: -1
+            });
+            passarinho2.anims.play('fly2', true);
 
-        // Spritesheet passarinho3
-        passarinho3 = this.add.sprite(150, 200, 'bird3').setScale(1.4)
-        this.anims.create({
-            key: 'fly3',
-            frames: this.anims.generateFrameNumbers('bird3', { start: 0, end: 7 }),
-            frameRate: 25,
-            repeat: -1
-        });
-        passarinho3.anims.play('fly3', true);
+            // Spritesheet passarinho3
+            passarinho3 = this.add.sprite(150, 200, 'bird3').setScale(1.4)
+            this.anims.create({
+                key: 'fly3',
+                frames: this.anims.generateFrameNumbers('bird3', { start: 0, end: 7 }),
+                frameRate: 25,
+                repeat: -1
+            });
+            passarinho3.anims.play('fly3', true);
 
 
 
